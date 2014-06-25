@@ -4,7 +4,7 @@
   <include name="NextAiredNotifications">
 		<control type="group">
 		  <left>40</left>
-			<top>645</top>
+			<top>635</top>
 			<visible>![Container.Content(Episodes) + Substring(Container.FolderPath,plugin://) | Stringcompare(ListItem.Label,..)]</visible>
 	    <include>NotificationsAnimations</include>
 		  <visible>!Window.IsActive(ShutdownMenu)</visible>
@@ -143,7 +143,7 @@
   <include name="AddonsNotifications">
 		<control type="group">
 		  <left>40</left>
-			<top>645</top>
+			<top>635</top>
 	    <include>NotificationsAnimations</include>
 		  <visible>!Window.IsActive(ShutdownMenu) + !Stringcompare(ListItem.Label,..)</visible>
 		  <animation type="Conditional" reversible="false" condition="![Window.IsActive(InfoDialog) | Window.IsActive(extendedprogressdialog)]">
@@ -287,7 +287,7 @@
   <include name="WeatherAlertsNotifications">
 		<control type="group">
 		  <left>40</left>
-			<top>645</top>
+			<top>635</top>
 	    <include>NotificationsAnimations</include>
 		  <visible>!Window.IsActive(ShutdownMenu)</visible>
 		  <animation type="Conditional" reversible="false" condition="![Window.IsActive(InfoDialog) | Window.IsActive(extendedprogressdialog)]">

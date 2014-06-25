@@ -137,7 +137,7 @@
 		  <!-- Music NP -->
 		  <control type="group">
 				<left>45</left>
-				<top>520</top>
+				<top>90</top>
 				<visible>Player.HasAudio + !Skin.HasSetting(ShowHomeScreenNPMusic) + !Window.IsVisible(script-globalsearch-main.xml) + !Window.IsVisible(script-Actors-DialogInfo.xml) + !Window.IsVisible(script-Actors-DialogVideoInfo.xml)</visible>
 		    <animation type="WindowOpen">
 		        <effect type="slide" start="-150,0" end="0,0" time="450" delay="0" tween="cubic" easing="out" />
@@ -157,7 +157,7 @@
 		    </animation>
 				<!-- Music Cover -->
 				<control type="group">
-					 <animation effect="slide" start="0,0" end="-210,0" time="300" reversible="true" tween="sine" easing="inout" condition="Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)">Conditional</animation>
+					 <animation effect="slide" start="0,0" end="-210,0" time="300" reversible="true" tween="sine" easing="inout" condition="Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) ">Conditional</animation>
 					 <control type="image">
 						 <left>-120</left>
 						 <top>-120</top>
@@ -165,7 +165,7 @@
 						 <height>400</height>
 						 <aspectratio align="center" aligny="center">stretch</aspectratio>
 				     <texture background="true">views/list/shine.png</texture>
-				     <visible>![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)]</visible>
+				     <visible>![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) ]</visible>
 					 </control>
 					 <control type="label">
 						 <description>NP label</description>
@@ -181,16 +181,6 @@
 						 <shadowcolor>77000000</shadowcolor>
 						 <angle>90</angle>
 					 </control>
-		       <control type="image">
-		         <left>3</left>
-		         <top>-50</top>
-		         <width>155</width>
-		         <height>155</height>
-             <texture diffuse="osd/cd_diffuse.png" background="true" fallback="osd/cd.png">$INFO[Player.FolderPath,,cdart.png]</texture>
-		         <aspectratio>keep</aspectratio>
-						 <include>CDImageAnim</include>
-					   <visible>!Player.IsInternetStream</visible>
-		      </control>				
 					<control type="image">
 							<left>0</left>
 							<top>0</top>
@@ -266,7 +256,7 @@
 		      <include>KaiToastSlideAnimations</include>
 		      <include>ScanSlideAnimations</include>
 					<animation effect="slide" start="0,0" end="0,150" time="260" tween="sine" easing="inout" condition="[Window.IsActive(Favourites) + Window.IsActive(ContextMenu)]">Conditional</animation>
-					<animation effect="slide" start="0,0" end="-170,0" time="300" tween="sine" easing="inout" condition="Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="-170,0" time="300" tween="sine" easing="inout" condition="Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) ">Conditional</animation>
 					<control type="label">
 						<description>Title label</description>
 						<left>0</left>
@@ -333,7 +323,7 @@
 			  <control type="group">
 				 <top>-25</top>
 				 <visible>VideoPlayer.Content(Movies) | VideoPlayer.Content(Episodes)</visible>
-				 <animation effect="slide" start="0,0" end="-180,0" time="300" reversible="true" tween="sine" easing="inout" condition="Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)">Conditional</animation>
+				 <animation effect="slide" start="0,0" end="-180,0" time="300" reversible="true" tween="sine" easing="inout" condition="Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) ">Conditional</animation>
 				 <control type="image">
 					 <left>-120</left>
 					 <top>-120</top>
@@ -341,7 +331,7 @@
 					 <height>400</height>
 					 <aspectratio align="center" aligny="center">stretch</aspectratio>
 				   <texture background="true">views/list/shine.png</texture>
-				   <visible>![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)]</visible>
+				   <visible>![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) ]</visible>
 				 </control>
 				 <control type="label">
 					 <description>NP label</description>
@@ -439,7 +429,7 @@
 		    <!-- Videos Cover -->
 			  <control type="group">
 				 <visible>!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(LiveTV)</visible>
-				 <animation effect="slide" start="0,0" end="-310,0" time="320" reversible="true" tween="sine" easing="inout" condition="Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)">Conditional</animation>
+				 <animation effect="slide" start="0,0" end="-310,0" time="320" reversible="true" tween="sine" easing="inout" condition="Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) ">Conditional</animation>
 				 <control type="image">
 					 <left>-180</left>
 					 <top>-140</top>
@@ -447,7 +437,7 @@
 					 <height>400</height>
 					 <aspectratio align="center" aligny="center">stretch</aspectratio>
 				   <texture background="true">views/list/shine.png</texture>
-				   <visible>![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)]</visible>
+				   <visible>![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) ]</visible>
 				 </control>
 				 <control type="label">
 					 <description>NP label</description>
@@ -555,7 +545,7 @@
 				<!-- LiveTV Cover -->
 				<control type="group">
 				   <visible>VideoPlayer.Content(LiveTV)</visible>
-					 <animation effect="slide" start="0,0" end="-210,0" time="300" reversible="true" tween="sine" easing="inout" condition="Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)">Conditional</animation>
+					 <animation effect="slide" start="0,0" end="-210,0" time="300" reversible="true" tween="sine" easing="inout" condition="Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) ">Conditional</animation>
 					 <control type="image">
 						 <left>-120</left>
 						 <top>-120</top>
@@ -563,7 +553,7 @@
 						 <height>400</height>
 						 <aspectratio align="center" aligny="center">stretch</aspectratio>
 				     <texture background="true">views/list/shine.png</texture>
-				     <visible>![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)]</visible>
+				     <visible>![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) ]</visible>
 					 </control>
 					 <control type="label">
 						 <description>NP label</description>
@@ -665,7 +655,7 @@
 		      <include>ScanSlideAnimations</include>
 				  <visible>VideoPlayer.Content(Movies)</visible>
 					<animation effect="slide" start="0,0" end="0,150" time="260" tween="sine" easing="inout" condition="[Window.IsActive(Favourites) + Window.IsActive(ContextMenu)]">Conditional</animation>
-					<animation effect="slide" start="0,0" end="-140,0" time="300" reversible="true" tween="sine" easing="inout" condition="Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="-140,0" time="300" reversible="true" tween="sine" easing="inout" condition="Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) ">Conditional</animation>
 					<control type="label">
 						<description>Title label</description>
 						<left>0</left>
@@ -715,7 +705,7 @@
 		      <include>ScanSlideAnimations</include>
 				  <visible>VideoPlayer.Content(Episodes)</visible>
 					<animation effect="slide" start="0,0" end="0,150" time="260" tween="sine" easing="inout" condition="[Window.IsActive(Favourites) + Window.IsActive(ContextMenu)]">Conditional</animation>
-					<animation effect="slide" start="0,0" end="-140,0" time="300" reversible="true" tween="sine" easing="inout" condition="Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="-140,0" time="300" reversible="true" tween="sine" easing="inout" condition="Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) ">Conditional</animation>
 					<control type="label">
 						<description>Title label</description>
 						<left>0</left>
@@ -765,7 +755,7 @@
 		      <include>ScanSlideAnimations</include>
 				  <visible>![VideoPlayer.Content(Movies) | VideoPlayer.Content(Episodes) | VideoPlayer.Content(LiveTV)]</visible>
 					<animation effect="slide" start="0,0" end="0,150" time="260" tween="sine" easing="inout" condition="[Window.IsActive(Favourites) + Window.IsActive(ContextMenu)]">Conditional</animation>
-					<animation effect="slide" start="0,0" end="-270,0" time="300" reversible="true" tween="sine" easing="inout" condition="Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="-270,0" time="300" reversible="true" tween="sine" easing="inout" condition="Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) ">Conditional</animation>
 					<control type="label">
 						<description>Title label</description>
 						<left>0</left>
@@ -815,7 +805,7 @@
 		      <include>ScanSlideAnimations</include>
 				  <visible>VideoPlayer.Content(LiveTV)</visible>
 					<animation effect="slide" start="0,0" end="0,150" time="260" tween="sine" easing="inout" condition="[Window.IsActive(Favourites) + Window.IsActive(ContextMenu)]">Conditional</animation>
-					<animation effect="slide" start="0,0" end="-170,0" time="300" reversible="true" tween="sine" easing="inout" condition="Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="-170,0" time="300" reversible="true" tween="sine" easing="inout" condition="Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) ">Conditional</animation>
 					<control type="grouplist" id="1">
 						<left>0</left>
 						<top>53</top>

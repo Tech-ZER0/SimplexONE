@@ -19,7 +19,6 @@
 		<include condition="!Skin.HasSetting(HideMusicSubMenu)">HomeSubMenuMusic</include>
 		<include condition="!Skin.HasSetting(HideSettingsSubMenu)">HomeSubMenuSettings</include>
 		<include condition="!Skin.HasSetting(HideAddonsSubMenu)">HomeSubMenuAddons</include>
-		<include condition="!Skin.HasSetting(HideLiveTVSubMenu)">HomeSubMenuLiveTV</include>
 		<include>SkinWidgetsLists</include>
 		<include>CommonDialogsFadeOutBG</include>
 	  <!-- Home TopSection -->
