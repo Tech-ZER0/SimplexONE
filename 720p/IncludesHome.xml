@@ -28,8 +28,7 @@
 					 <description>Home Container</description>
 					 
 					 <left>-95</left>
-					 <posy>400</posy>
-					 
+					 <posy>325</posy>		 
 					 <width>1500</width>
 					 <height>720</height>
 					 <align>center</align>
@@ -44,7 +43,7 @@
 					 <ondown condition="[[Library.HasContent(movies) + Container(20).HasFocus(2)] + Skin.HasSetting(HideMoviesSubMenu)]
 														| [[Library.HasContent(tvshows) + Container(20).HasFocus(1)] + Skin.HasSetting(HideTVShowsSubMenu)]
 														| [[Library.HasContent(music) + Container(20).HasFocus(3)] + Skin.HasSetting(HideMusicSubMenu)]">SetFocus(81)</ondown>
-					 <ondown condition="Container(20).HasFocus(13)">Skin.SetAddon(TrailersAddon_Path,xbmc.addon.video)</ondown>
+					
 					 <ondown condition="Container(20).HasFocus(14)">EjectTray</ondown>
 					 <ondown condition="Container(20).HasFocus(15)">Skin.SetString(CustomFavourite1.Label)</ondown>
 					 <ondown condition="Container(20).HasFocus(16)">Skin.SetString(CustomFavourite2.Label)</ondown>

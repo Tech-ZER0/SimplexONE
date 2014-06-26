@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+ <?xml version="1.0" encoding="UTF-8"?>
 <window  type="buttonMenu" id="111">
 	<defaultcontrol>9000</defaultcontrol>
 	<onload>Dialog.Close(playercontrols)</onload>
@@ -12,7 +12,7 @@
 
 	 <control type="group">
 		<left>45</left>
-		<top>25</top>
+		<top>265</top>
 	  <include>TopOptionsSlideAnimations</include>
 	  <control type="grouplist" id="9000">
 			<left>0</left>
@@ -61,21 +61,6 @@
 				<onclick>XBMC.Powerdown()</onclick>
 				<visible>System.CanPowerDown</visible>
 				<label>$LOCALIZE[13016]</label>
-			</control>
-			<control type="button" id="6">
-				<description>Custom Shutdown Timer</description>
-			  <include>TopLeftMenusButton</include>
-				<onclick>XBMC.AlarmClock(shutdowntimer,XBMC.Powerdown())</onclick>
-				<label>$LOCALIZE[20150]</label>
-				<visible>!System.HasAlarm(shutdowntimer)</visible>
-				<visible>System.CanPowerDown</visible>
-			</control>
-			<control type="button" id="7">
-				<description>Cancel Shutdown Timer</description>
-			  <include>TopLeftMenusButton</include>
-				<onclick>XBMC.CancelAlarm(shutdowntimer)</onclick>
-				<label>$LOCALIZE[20151]</label>
-				<visible>System.HasAlarm(shutdowntimer)</visible>
 			</control>
 			<control type="button" id="8">
 				<description>Suspend button</description>
